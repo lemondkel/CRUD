@@ -21,4 +21,9 @@ public class BoardController {
 	public void listAll2(Model model)throws Exception{
 		model.addAttribute("list",service.listAll2());
 	}
+
+	@RequestMapping(value="/listAll", method = RequestMethod.GET)
+	public void listAll(Model model)throws Exception{
+		model.addAttribute("list",service.listAll());
+	}
 }
