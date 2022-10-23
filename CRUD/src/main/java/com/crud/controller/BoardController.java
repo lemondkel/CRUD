@@ -15,10 +15,15 @@ import com.crud.service.BoardService;
 public class BoardController {
 	
 	@Inject
-	private BoardService service; 
-	
-//	@RequestMapping(value="/listAll", method = RequestMethod.GET)
-//	public void listAll(Model model)throws Exception{
-//		model.addAttribute("list",service.listAll());
-//	}
+	private BoardService service;
+
+	@RequestMapping(value="/listAll", method = RequestMethod.GET)
+	public void listAll(Model model)throws Exception{
+		model.addAttribute("list",service.listAll());
+	}
+
+	@RequestMapping(value="/listAll2", method = RequestMethod.GET)
+	public void listAll2(Model model)throws Exception{
+		model.addAttribute("list",service.listAll());
+	}
 }
